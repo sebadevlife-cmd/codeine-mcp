@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codeine-mcp"
+version = "1.0.0"
+description = "Codeine - Universal MCP server for LLM context offloading: AST skeletons, BM25 symbol search, surgical patches, smart log pruning and distilled external schemas."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Codeine contributors" }]
+keywords = ["mcp", "llm", "context", "tree-sitter", "code-intelligence", "bm25"]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "mcp>=1.2.0,<2.0.0",
+    "tree-sitter>=0.23.0",
+    "tree-sitter-language-pack>=0.6.0",
+]
+
+[project.optional-dependencies]
+postgres = ["pg8000>=1.30"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+codeine-mcp = "codeine.server:main"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
