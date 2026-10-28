@@ -1,6 +1,6 @@
 # 🧬 Codeine — Universal MCP Server for LLM Context Offloading
 
-[![CI](https://github.com/sebadevlife-cmd/codeine-mcp/actions/workflows/ci.yml/badge.svg)](../../actions)
+[![CI](https://github.com/soporte2-iRG/codeine-mcp/actions/workflows/ci.yml/badge.svg)](../../actions)
 [![Tests](https://img.shields.io/badge/tests-27%2F27-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)]()
 [![Platforms](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-green)]()
